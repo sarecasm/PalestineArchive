@@ -304,6 +304,20 @@ nav{
 }
 .gallery-hint span{color:var(--olive-lt);}
 
+.gallery-disclaimer{
+  padding:0.85rem 2.5rem;
+  font-family:'Karla',sans-serif;font-size:0.72rem;
+  line-height:1.6;color:#7a6e58;
+  background:rgba(192,57,43,0.04);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:flex-start;gap:0.65rem;
+}
+.disclaimer-icon{
+  font-size:0.85rem;color:var(--poppy);
+  flex-shrink:0;margin-top:0.05rem;font-weight:700;
+}
+@media(max-width:600px){.gallery-disclaimer{padding:0.85rem 1.2rem;}}
+
 .gallery-grid{
   padding:2.5rem;
   display:grid;
@@ -860,6 +874,12 @@ nav{
   <div class="gallery-hint">
     <span>↻</span> Hover to flip &nbsp;·&nbsp; Tap to flip on mobile
   </div>
+  <div class="gallery-disclaimer">
+    <span class="disclaimer-icon">©</span>
+    All photographs in this gallery are my own and remain under my exclusive copyright. 
+    No image may be downloaded, reproduced, republished, resold, or used for any commercial or monetised purpose without my explicit written permission. 
+    Personal, non-commercial sharing with proper attribution is permitted.
+  </div>
   <div class="gallery-grid" id="gallery-grid"></div>
 
   <footer class="site-footer">
@@ -896,9 +916,6 @@ nav{
       </button>
     </div>
     <div class="res-main">
-      <div class="res-topbar">
-        <button class="res-add-btn" onclick="openResModal()">+ Add Resource</button>
-      </div>
       <div class="res-list" id="res-list"></div>
     </div>
   </div>
@@ -993,9 +1010,9 @@ function showPage(name){
 
 // ── DATA
 let photos=[
-  {id:1,src:'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Dome_of_the_rock_-_jerusalem.jpg/1200px-Dome_of_the_rock_-_jerusalem.jpg',loc:'Jerusalem · القدس',title:'Dome of the Rock',desc:'Built in 691 CE, the Dome of the Rock stands as one of the oldest works of Islamic architecture — a golden crown over Jerusalem and a symbol of Palestinian heritage that endures across centuries.'},
-  {id:2,src:'https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Olive_trees_in_Palestine.jpg/1200px-Olive_trees_in_Palestine.jpg',loc:'West Bank · الضفة الغربية',title:'Ancient Olive Groves',desc:"Some of Palestine's olive trees are over 2,000 years old. The olive embodies صمود — steadfastness. Each harvest is an act of belonging, each tree a witness to history."},
-  {id:3,src:'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Old_City_of_Nablus.jpg/1200px-Old_City_of_Nablus.jpg',loc:'Nablus · نابلس',title:'Old City of Nablus',desc:'One of the oldest continuously inhabited cities in the world. Renowned for olive oil soap, legendary knafeh, and the quiet, rooted resilience of its people.'},
+  {id:1,src:'./images/FlorenceFlag.jpg',loc:'Florence, Italy · فلورنسا، إيطاليا',title:'From the River to the Sea',desc:'A Palestinian flag flies over the Arno River as protesters gather in solidarity, calling for an end to the genocide. Viva Palestina.'},
+  {id:2,src:'./images/FlorenceProtest.JPG',loc:'Florence, Italy · فلورنسا، إيطاليا',title:'Italian Protestor',desc:"A protestor carrying the Palestinian flag."},
+  {id:3,src:'./images/VeniceFlag.jpg',loc:'Venice, Italy · البندقية، إيطاليا',title:'Colors over the Canal',desc:'Draped from a Venetian window, a Palestinian flag sways above the still canal waters — a splash of color and conviction against the ancient stone.'},
 ];
 
 let resources=[
