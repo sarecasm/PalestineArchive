@@ -1355,7 +1355,7 @@ function renderRes(){
     <div class="res-card">
       <div class="res-card-accent" style="background:${accentColors[r.type]||'var(--sand)'}"></div>
       <div>
-        <span class="res-badge rb-${r.type}">${r.label || r.type}</span>
+        ${curCat==='all'?`<span class="res-badge rb-${r.type}">${r.label || r.type}</span>`:''}
         <div class="res-name">${r.name}</div>
         ${r.author?`<div class="res-author">${r.author}</div>`:''}
         ${r.desc?`<div class="res-desc">${r.desc}</div>`:''}
