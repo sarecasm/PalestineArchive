@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 67">
+<defs>
+  <clipPath id="fc"><rect x="0.5" y="0.5" width="99" height="66" rx="2"/></clipPath>
+</defs>
+<g clip-path="url(#fc)">
+ 
+  <!-- BLACK STRIPE -->
+  <rect x="0" y="0" width="100" height="22" fill="#2b2416"/>
+  <line x1="0" y1="5"  x2="100" y2="5"  stroke="#3a2e1a" stroke-width="0.5"/>
+  <line x1="0" y1="10" x2="100" y2="10" stroke="#3a2e1a" stroke-width="0.4"/>
+  <line x1="0" y1="15" x2="100" y2="15" stroke="#3a2e1a" stroke-width="0.4"/>
+  <line x1="0" y1="20" x2="100" y2="20" stroke="#3a2e1a" stroke-width="0.35"/>
+  <!-- olive branch stem -->
+  <path d="M54,13 Q62,10 70,13 Q78,16 86,12 Q91,10 96,12" fill="none" stroke="#c9a96e" stroke-width="0.6" opacity="0.6"/>
+  <!-- olive leaves on black — smaller -->
+  <ellipse cx="57" cy="10" rx="2.8" ry="1.1" fill="#7a8040" opacity="0.75" transform="rotate(-25,57,10)"/>
+  <ellipse cx="65" cy="8"  rx="2.5" ry="1"   fill="#8a9048" opacity="0.7"  transform="rotate(-35,65,8)"/>
+  <ellipse cx="73" cy="11" rx="2.8" ry="1.1" fill="#7a8040" opacity="0.75" transform="rotate(-20,73,11)"/>
+  <ellipse cx="81" cy="9"  rx="2.5" ry="1"   fill="#8a9048" opacity="0.7"  transform="rotate(-30,81,9)"/>
+  <ellipse cx="88" cy="11" rx="2.8" ry="1.1" fill="#7a8040" opacity="0.75" transform="rotate(-18,88,11)"/>
+  <ellipse cx="94" cy="9"  rx="2.2" ry="0.9" fill="#8a9048" opacity="0.65" transform="rotate(-28,94,9)"/>
+ 
+  <!-- CREAM STRIPE -->
+  <rect x="0" y="22" width="100" height="23" fill="#f7f0e3"/>
+  <line x1="0" y1="26" x2="100" y2="26" stroke="#e8dcc8" stroke-width="0.4"/>
+  <line x1="0" y1="30" x2="100" y2="30" stroke="#e8dcc8" stroke-width="0.35"/>
+  <line x1="0" y1="34" x2="100" y2="34" stroke="#e8dcc8" stroke-width="0.35"/>
+  <line x1="0" y1="38" x2="100" y2="38" stroke="#e8dcc8" stroke-width="0.4"/>
+  <line x1="0" y1="42" x2="100" y2="42" stroke="#e8dcc8" stroke-width="0.35"/>
+  <!-- olive leaves on cream — smaller -->
+  <ellipse cx="52" cy="27" rx="3"   ry="1.2" fill="#8a9a70" opacity="0.45" transform="rotate(-15,52,27)"/>
+  <ellipse cx="62" cy="26" rx="3"   ry="1.2" fill="#8a9a70" opacity="0.4"  transform="rotate(-25,62,26)"/>
+  <ellipse cx="72" cy="27" rx="3.2" ry="1.2" fill="#8a9a70" opacity="0.45" transform="rotate(-12,72,27)"/>
+  <ellipse cx="82" cy="26" rx="3"   ry="1.1" fill="#8a9a70" opacity="0.4"  transform="rotate(-20,82,26)"/>
+  <ellipse cx="92" cy="27" rx="3"   ry="1.2" fill="#8a9a70" opacity="0.45" transform="rotate(-10,92,27)"/>
+  <!-- poppy flowers — tighter clusters -->
+  <ellipse cx="54" cy="37" rx="2.2" ry="1.7" fill="#d4857a" opacity="0.55" transform="rotate(-15,54,37)"/>
+  <ellipse cx="57" cy="35" rx="2.2" ry="1.7" fill="#d4857a" opacity="0.5"  transform="rotate(20,57,35)"/>
+  <circle  cx="55.5" cy="36" r="1"   fill="#2b1a10" opacity="0.6"/>
+  <ellipse cx="68" cy="37" rx="2.2" ry="1.7" fill="#d4857a" opacity="0.55" transform="rotate(-15,68,37)"/>
+  <ellipse cx="71" cy="35" rx="2.2" ry="1.7" fill="#d4857a" opacity="0.5"  transform="rotate(20,71,35)"/>
+  <circle  cx="69.5" cy="36" r="1"   fill="#2b1a10" opacity="0.6"/>
+  <ellipse cx="82" cy="37" rx="2.2" ry="1.7" fill="#d4857a" opacity="0.55" transform="rotate(-15,82,37)"/>
+  <ellipse cx="85" cy="35" rx="2.2" ry="1.7" fill="#d4857a" opacity="0.5"  transform="rotate(20,85,35)"/>
+  <circle  cx="83.5" cy="36" r="1"   fill="#2b1a10" opacity="0.6"/>
+ 
+  <!-- GREEN STRIPE -->
+  <rect x="0" y="45" width="100" height="22" fill="#4a6020"/>
+  <line x1="0" y1="48" x2="100" y2="48" stroke="#3e5018" stroke-width="0.5"/>
+  <line x1="0" y1="52" x2="100" y2="52" stroke="#3e5018" stroke-width="0.4"/>
+  <line x1="0" y1="56" x2="100" y2="56" stroke="#3e5018" stroke-width="0.4"/>
+  <line x1="0" y1="60" x2="100" y2="60" stroke="#3e5018" stroke-width="0.35"/>
+  <line x1="0" y1="64" x2="100" y2="64" stroke="#3e5018" stroke-width="0.35"/>
+  <!-- olive leaves on green — smaller -->
+  <ellipse cx="52" cy="51" rx="3.2" ry="1.2" fill="#c8d0a8" opacity="0.45" transform="rotate(15,52,51)"/>
+  <ellipse cx="62" cy="50" rx="3"   ry="1.1" fill="#c8d0a8" opacity="0.4"  transform="rotate(25,62,50)"/>
+  <ellipse cx="72" cy="51" rx="3.2" ry="1.2" fill="#c8d0a8" opacity="0.45" transform="rotate(12,72,51)"/>
+  <ellipse cx="82" cy="50" rx="3"   ry="1.1" fill="#c8d0a8" opacity="0.4"  transform="rotate(22,82,50)"/>
+  <ellipse cx="92" cy="51" rx="3"   ry="1.2" fill="#c8d0a8" opacity="0.4"  transform="rotate(10,92,51)"/>
+  <!-- olive berries — smaller -->
+  <circle cx="57" cy="60" r="1.2" fill="#3a5010" opacity="0.7"/>
+  <circle cx="65" cy="61" r="1"   fill="#3a5010" opacity="0.6"/>
+  <circle cx="73" cy="60" r="1.2" fill="#3a5010" opacity="0.7"/>
+  <circle cx="81" cy="61" r="1"   fill="#3a5010" opacity="0.6"/>
+  <circle cx="89" cy="60" r="1.2" fill="#3a5010" opacity="0.7"/>
+  <circle cx="96" cy="61" r="1"   fill="#3a5010" opacity="0.6"/>
+ 
+  <!-- GOLD STRIPE DIVIDERS -->
+  <rect x="0" y="21.5" width="100" height="1" fill="#c9a96e" opacity="0.8"/>
+  <rect x="0" y="44.5" width="100" height="1" fill="#c9a96e" opacity="0.8"/>
+ 
+  <!-- RED TRIANGLE -->
+  <polygon points="0,0 0,67 44,33.5" fill="#b52a20"/>
+  <line x1="0" y1="8"  x2="40" y2="30" stroke="#cc3322" stroke-width="0.7" opacity="0.3"/>
+  <line x1="0" y1="16" x2="43" y2="32" stroke="#cc3322" stroke-width="0.6" opacity="0.25"/>
+  <line x1="0" y1="24" x2="44" y2="33" stroke="#cc3322" stroke-width="0.6" opacity="0.25"/>
+  <line x1="0" y1="32" x2="44" y2="34" stroke="#cc3322" stroke-width="0.6" opacity="0.25"/>
+  <line x1="0" y1="40" x2="43" y2="35" stroke="#cc3322" stroke-width="0.6" opacity="0.25"/>
+  <line x1="0" y1="50" x2="40" y2="37" stroke="#cc3322" stroke-width="0.7" opacity="0.3"/>
+  <line x1="0" y1="60" x2="34" y2="42" stroke="#cc3322" stroke-width="0.7" opacity="0.3"/>
+  <!-- cream leaf accents on triangle — smaller -->
+  <ellipse cx="14" cy="18" rx="2.5" ry="1"   fill="#f7f0e3" opacity="0.22" transform="rotate(35,14,18)"/>
+  <ellipse cx="12" cy="30" rx="2.8" ry="1.1" fill="#f7f0e3" opacity="0.2"  transform="rotate(20,12,30)"/>
+  <ellipse cx="18" cy="42" rx="2.5" ry="1"   fill="#f7f0e3" opacity="0.22" transform="rotate(30,18,42)"/>
+  <ellipse cx="10" cy="53" rx="2.5" ry="1"   fill="#f7f0e3" opacity="0.18" transform="rotate(25,10,53)"/>
+  <ellipse cx="26" cy="24" rx="2.2" ry="0.9" fill="#f7f0e3" opacity="0.16" transform="rotate(40,26,24)"/>
+  <ellipse cx="28" cy="38" rx="2.2" ry="0.9" fill="#f7f0e3" opacity="0.16" transform="rotate(28,28,38)"/>
+ 
+  <!-- TRIANGLE EDGE -->
+  <polyline points="0,0 44,33.5 0,67" fill="none" stroke="#c9a96e" stroke-width="0.8" opacity="0.6"/>
+ 
+</g>
+<rect x="0.5" y="0.5" width="99" height="66" rx="2" fill="none" stroke="#c9a96e" stroke-width="1" opacity="0.7"/>
+</svg>
