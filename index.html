@@ -752,7 +752,8 @@ nav{
 .rb-books{background:rgba(74,111,165,0.12);color:#4a6fa5;}
 .rb-videos{background:rgba(107,76,107,0.12);color:#6b4c6b;}
 .rb-art{background:rgba(138,170,80,0.15);color:#8aaa50;}
-.rb-websites{background:rgba(201,169,110,0.2);color:#8a6e30;}
+.rb-explore{background:rgba(192,122,58,0.15);color:#c07a3a;}
+.rb-learn{background:rgba(160,80,112,0.15);color:#a05070;}
 .rb-traditions{background:rgba(192,57,43,0.1);color:var(--poppy);}
 
 .res-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.2rem;color:var(--ink);}
@@ -1072,7 +1073,7 @@ nav{
   <div class="sec-header">
     <div class="sec-tag">Library</div>
     <h2 class="sec-title">Resources &amp; <em>Readings</em></h2>
-    <p class="sec-sub">Books, films, art, and websites — curated for learning and sharing</p>
+    <p class="sec-sub">Books, films, art, and more — curated for learning and sharing</p>
   </div>
 
   <!-- Mobile pill filters (hidden on desktop) -->
@@ -1089,8 +1090,11 @@ nav{
     <button class="res-pill" data-cat="art" onclick="filterRes('art')">
       <span class="res-dot" style="background:#8aaa50"></span> Art
     </button>
-    <button class="res-pill" data-cat="websites" onclick="filterRes('websites')">
-      <span class="res-dot" style="background:var(--sand)"></span> Websites
+    <button class="res-pill" data-cat="explore" onclick="filterRes('explore')">
+      <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
+    </button>
+    <button class="res-pill" data-cat="learn" onclick="filterRes('learn')">
+      <span class="res-dot" style="background:#a05070"></span> Learn
     </button>
     <button class="res-pill" data-cat="traditions" onclick="filterRes('traditions')">
       <span class="res-dot" style="background:var(--poppy)"></span> Traditions
@@ -1112,8 +1116,11 @@ nav{
       <button class="res-navbtn" data-cat="art" onclick="filterRes('art')">
         <span class="res-dot" style="background:#8aaa50"></span> Art
       </button>
-      <button class="res-navbtn" data-cat="websites" onclick="filterRes('websites')">
-        <span class="res-dot" style="background:var(--sand)"></span> Websites
+      <button class="res-navbtn" data-cat="explore" onclick="filterRes('explore')">
+        <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
+      </button>
+      <button class="res-navbtn" data-cat="learn" onclick="filterRes('learn')">
+        <span class="res-dot" style="background:#a05070"></span> Learn
       </button>
       <button class="res-navbtn" data-cat="traditions" onclick="filterRes('traditions')">
         <span class="res-dot" style="background:var(--poppy)"></span> Traditions
@@ -1185,7 +1192,8 @@ nav{
       <option value="books">Book</option>
       <option value="videos">Film / Video</option>
       <option value="art">Art</option>
-      <option value="websites">Website / Article</option>
+      <option value="explore">Explore Palestine</option>
+      <option value="learn">Learn</option>
     </select>
     <label>Title</label>
     <input type="text" id="r-name" placeholder="e.g. The Question of Palestine"/>
@@ -1279,12 +1287,17 @@ const resArt = [
   {id:15, type:'art', name:'Palestine Poster Project Archives', author:'palestineposterproject.org', desc:'An extensive digital archive of Palestinian posters spanning decades, documenting the visual history of Palestinian art, culture, and political struggle.', link:'https://www.palestineposterproject.org', img:IMGS.palestine_poster_pro},
 ];
 
-const resWebsites = [
-  {id:8, type:'websites', name:'The Palestinian Museum Digital Archive', author:'palarchive.org', desc:'A digital archive dedicated to preserving Palestinian history, culture, and memory through historical documents, images, and records.', link:'https://palarchive.org'},
-  {id:9, type:'websites', name:'Palestine Remembered', author:'palestineremembered.com', desc:'A comprehensive database of Palestinian villages, oral testimonies, maps, and historical records.', link:'https://www.palestineremembered.com'},
-  {id:10, type:'websites', name:'Visualizing Palestine', author:'visualizingpalestine.org', desc:'Data-driven visual advocacy — communicating the Palestinian experience through powerful infographics.', link:'https://www.visualizingpalestine.org'},
-  {id:13, type:'websites', name:'Decolonize Palestine', author:'decolonizepalestine.com', desc:'A resource hub covering Palestinian history, debunking common myths, and providing reading lists and FAQs on the Palestinian cause.', link:'https://decolonizepalestine.com'},
-  {id:14, type:'websites', name:'Palestinian Youth Movement', author:'palestinianyouthmovement.com', desc:'A grassroots international movement organizing Palestinian and Arab youth in the diaspora to advocate for Palestinian liberation.', link:'https://www.palestinianyouthmovement.com'},
+const resExplore = [
+  {id:8,  type:'explore', name:'The Palestinian Museum Digital Archive', author:'palarchive.org',          desc:'A digital archive dedicated to preserving Palestinian history, culture, and memory through historical documents, images, and records.', link:'https://palarchive.org'},
+  {id:9,  type:'explore', name:'Palestine Remembered',                   author:'palestineremembered.com', desc:'A comprehensive database of Palestinian villages, oral testimonies, maps, and historical records.',                                   link:'https://www.palestineremembered.com'},
+  {id:10, type:'explore', name:'Visualizing Palestine',                  author:'visualizingpalestine.org', desc:'Data-driven visual advocacy — communicating the Palestinian experience through powerful infographics.',                           link:'https://www.visualizingpalestine.org'},
+  {id:22, type:'explore', name:'Museum of the Palestinian People',       author:'mpp-dc.org',               desc:'A virtual tour of the Museum of the Palestinian People, exploring Palestinian history, art, and cultural heritage.',                   link:'https://mpp-dc.org/TourSupport/'},
+];
+
+const resLearn = [
+  {id:10, type:'learn', name:'Visualizing Palestine', author:'visualizingpalestine.org', desc:'Data-driven visual advocacy — communicating the Palestinian experience through powerful infographics.', link:'https://www.visualizingpalestine.org'},
+  {id:13, type:'learn', name:'Decolonize Palestine',      author:'decolonizepalestine.com',      desc:'A resource hub covering Palestinian history, debunking common myths, and providing reading lists and FAQs on the Palestinian cause.',       link:'https://decolonizepalestine.com'},
+  {id:14, type:'learn', name:'Palestinian Youth Movement', author:'palestinianyouthmovement.com', desc:'A grassroots international movement organizing Palestinian and Arab youth in the diaspora to advocate for Palestinian liberation.',           link:'https://www.palestinianyouthmovement.com'},
 ];
 
 const resTraditions = [
@@ -1294,10 +1307,10 @@ const resTraditions = [
 ];
 
 // Merged view used by filter logic
-const allResources = [...resBooks, ...resVideos, ...resArt, ...resWebsites, ...resTraditions];
-const resByType = { books: resBooks, videos: resVideos, art: resArt, websites: resWebsites, traditions: resTraditions };
+const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resLearn, ...resTraditions];
+const resByType = { books: resBooks, videos: resVideos, art: resArt, explore: resExplore, learn: resLearn, traditions: resTraditions };
 
-const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',websites:'var(--sand)',traditions:'var(--poppy)'};
+const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',explore:'#c07a3a',learn:'#a05070',traditions:'var(--poppy)'};
 let curCat='all',imgData=null;
 
 // ── GALLERY
@@ -1502,7 +1515,7 @@ function submitRes(){
   if(!name){alert('Please enter a title.');return;}
   const type=document.getElementById('r-type').value;
   const entry={id:Date.now(),type,name,author:document.getElementById('r-author').value.trim(),desc:document.getElementById('r-desc').value.trim(),link:document.getElementById('r-link').value.trim()};
-  (resByType[type]||resWebsites).push(entry);
+  (resByType[type]||resLearn).push(entry);
   allResources.push(entry);
   renderRes();closeResModal();
 }
