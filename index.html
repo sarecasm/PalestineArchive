@@ -737,9 +737,7 @@ nav{
   border-radius:3px;
   opacity:0.5;
 }
-@media(max-width:480px){
-  .res-thumb{display:none;}
-}
+
 .res-card:hover{box-shadow:0 6px 24px var(--shadow);border-color:var(--olive-pale);transform:translateY(-1px);}
 .res-card-accent{position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:6px 0 0 6px;}
 
@@ -1288,10 +1286,11 @@ const resArt = [
 ];
 
 const resExplore = [
+  {id:22, type:'explore', name:'Museum of the Palestinian People',       author:'mpp-dc.org',               desc:'A virtual tour of the Museum of the Palestinian People, exploring Palestinian history, art, and cultural heritage.',                   link:'https://mpp-dc.org/TourSupport/'},
   {id:8,  type:'explore', name:'The Palestinian Museum Digital Archive', author:'palarchive.org',          desc:'A digital archive dedicated to preserving Palestinian history, culture, and memory through historical documents, images, and records.', link:'https://palarchive.org'},
   {id:9,  type:'explore', name:'Palestine Remembered',                   author:'palestineremembered.com', desc:'A comprehensive database of Palestinian villages, oral testimonies, maps, and historical records.',                                   link:'https://www.palestineremembered.com'},
-  {id:22, type:'explore', name:'Museum of the Palestinian People',       author:'mpp-dc.org',               desc:'A virtual tour of the Museum of the Palestinian People, exploring Palestinian history, art, and cultural heritage.',                   link:'https://mpp-dc.org/TourSupport/'},
 ];
+
 
 const resLearn = [
   {id:13, type:'learn', name:'Decolonize Palestine',      author:'decolonizepalestine.com',      desc:'A resource hub covering Palestinian history, debunking common myths, and providing reading lists and FAQs on the Palestinian cause.',       link:'https://decolonizepalestine.com'},
