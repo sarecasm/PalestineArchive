@@ -783,6 +783,11 @@ nav{
 .res-link-text{display:inline;}
 .res-link-icon{display:none;}
 
+.res-card-text{flex:1;}
+.res-card-body{min-width:0;}
+.res-desc-mobile{display:none;}
+.res-desc-desktop{display:block;}
+
 @media(max-width:720px){
   .res-card{
     display:grid;grid-template-columns:1fr auto;gap:0.75rem;
@@ -808,14 +813,9 @@ nav{
   .res-desc-mobile{
     display:block;
     font-size:0.86rem;line-height:1.7;color:#6a6050;
-    margin-top:0.6rem;
+    margin-top:0;
   }
 }
-
-.res-card-text{flex:1;}
-.res-card-body{min-width:0;}
-.res-desc-mobile{display:none;}
-.res-desc-desktop{display:block;}
 
 .res-empty{
   padding:4rem 2rem;text-align:center;color:#c0b8a8;
