@@ -802,9 +802,21 @@ nav{
     width:90px;height:28px;
     margin:10px 0;
   }
+  .res-desc-desktop{display:none;}
+  .res-desc-mobile{
+    display:block;
+    font-size:0.86rem;line-height:1.7;color:#6a6050;
+    margin-top:0.6rem;
+  }
+  .res-card-inner{
+    flex-direction:row;
+    align-items:flex-start;
+  }
 }
 
-.res-empty{
+.res-card-text{flex:1;}
+.res-desc-mobile{display:none;}
+.res-desc-desktop{display:block;}
   padding:4rem 2rem;text-align:center;color:#c0b8a8;
   font-family:'Karla',sans-serif;font-size:0.8rem;letter-spacing:0.08em;
 }
@@ -1540,13 +1552,14 @@ function renderRes(){
       <div class="res-card-accent" style="background:${accentColors[r.type]||'var(--sand)'}"></div>
       <div class="res-card-inner">
         ${thumbHtml}
-        <div>
+        <div class="res-card-text">
           ${curCat==='all'||curCat==='videos'?`<span class="res-badge rb-${r.type}">${r.label || r.type}</span>`:''}
           <div class="res-name">${r.name}</div>
           ${r.author?`<div class="res-author">${r.author}</div>`:''}
-          ${r.desc?`<div class="res-desc">${r.desc}</div>`:''}
+          ${r.desc?`<div class="res-desc res-desc-desktop">${r.desc}</div>`:''}
         </div>
       </div>
+      ${r.desc?`<div class="res-desc res-desc-mobile">${r.desc}</div>`:''}
       ${r.link?`<span class="res-link">
         <span class="res-link-text">Open ↗</span>
         <svg class="res-link-icon" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
