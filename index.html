@@ -1882,6 +1882,7 @@ function filterRes(cat, scrollPillIntoView){
   document.querySelectorAll('.res-navbtn').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
   document.querySelectorAll('.res-pill').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
   renderRes();
+  window.scrollTo({top:0, behavior:'instant'});
   if(scrollPillIntoView && window.matchMedia('(hover:none)').matches){
     requestAnimationFrame(()=>{
       const activePill = document.querySelector(`.res-pill[data-cat="${cat}"]`);
