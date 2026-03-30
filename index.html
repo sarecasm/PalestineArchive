@@ -1059,11 +1059,11 @@ nav{
       <div class="strip-title">Resources</div>
       <div class="strip-desc">Books, films, art, and links curated for learning, teaching, and sharing Palestinian history.</div>
     </div>
-    <div class="strip-card" style="cursor:default;">
+    <div class="strip-card" onclick="showPage('resources')">
       <div class="strip-icon">🕊</div>
-      <div class="strip-label">Symbol</div>
-      <div class="strip-title">صمود · Sumud</div>
-      <div class="strip-desc">Steadfastness. The quiet, rooted perseverance of a people — like the ancient olive, still standing.</div>
+      <div class="strip-label">In Memory</div>
+      <div class="strip-title">Prominent Figures</div>
+      <div class="strip-desc">Honoring Palestinian scholars, artists, writers, and leaders — their lives, work, and legacies.</div>
     </div>
   </div>
 
@@ -1125,14 +1125,23 @@ nav{
     <button class="res-pill" data-cat="learn" onclick="filterRes('learn')">
       <span class="res-dot" style="background:#a05070"></span> Learn
     </button>
+    <button class="res-pill" data-cat="news" onclick="filterRes('news')">
+      <span class="res-dot" style="background:#8a6a2a"></span> News &amp; Updates
+    </button>
     <button class="res-pill" data-cat="art" onclick="filterRes('art')">
       <span class="res-dot" style="background:#8aaa50"></span> Art
+    </button>
+    <button class="res-pill" data-cat="music" onclick="filterRes('music')">
+      <span class="res-dot" style="background:#2a6e8a"></span> Music &amp; Podcasts
     </button>
     <button class="res-pill" data-cat="traditions" onclick="filterRes('traditions')">
       <span class="res-dot" style="background:var(--poppy)"></span> Traditions
     </button>
     <button class="res-pill" data-cat="getinvolved" onclick="filterRes('getinvolved')">
       <span class="res-dot" style="background:#2c6e5a"></span> Get Involved
+    </button>
+    <button class="res-pill" data-cat="figures" onclick="filterRes('figures')">
+      <span class="res-dot" style="background:#7a4a8a"></span> Figures
     </button>
   </div>
 
@@ -1154,14 +1163,23 @@ nav{
       <button class="res-navbtn" data-cat="learn" onclick="filterRes('learn')">
         <span class="res-dot" style="background:#a05070"></span> Learn
       </button>
+      <button class="res-navbtn" data-cat="news" onclick="filterRes('news')">
+        <span class="res-dot" style="background:#8a6a2a"></span> News &amp; Updates
+      </button>
       <button class="res-navbtn" data-cat="art" onclick="filterRes('art')">
         <span class="res-dot" style="background:#8aaa50"></span> Art
+      </button>
+      <button class="res-navbtn" data-cat="music" onclick="filterRes('music')">
+        <span class="res-dot" style="background:#2a6e8a"></span> Music &amp; Podcasts
       </button>
       <button class="res-navbtn" data-cat="traditions" onclick="filterRes('traditions')">
         <span class="res-dot" style="background:var(--poppy)"></span> Traditions
       </button>
       <button class="res-navbtn" data-cat="getinvolved" onclick="filterRes('getinvolved')">
         <span class="res-dot" style="background:#2c6e5a"></span> Get Involved
+      </button>
+      <button class="res-navbtn" data-cat="figures" onclick="filterRes('figures')">
+        <span class="res-dot" style="background:#7a4a8a"></span> Prominent Figures
       </button>
     </div>
     <div class="res-main">
@@ -1352,7 +1370,10 @@ const IMGS = {
   palestine_old_pics_img: './images/palestine_old_pics_img.png',
   egypt_palestine_frith_img: './images/egypt_palestine_frith_img.png',
   pal_life_photos_img: './images/pal_life_photos_img.png',
-  oldpik_img: './images/oldPik.png'};
+  oldpik_img: './images/oldPik.png',
+  palestine_landscape_img: './images/PalestineLandscape.png',
+  popular_cradle_img: './images/popularCradle.jpeg',
+  this_palestine_img: './images/thisPalestinePodcast.png'};
 
 // ── RESOURCE DATA (one array per category)
 
@@ -1427,6 +1448,7 @@ const resExplore = [
   {id:36, type:'explore', name:'Raised-Map of Palestine (1893)',          author:'David Rumsey Map Collection', desc:'A raised relief map of Palestine created by George Armstrong in 1893, published by the Palestine Exploration Fund as part of a national atlas collection — offering a vivid topographic portrait of the land.', link:'https://www.davidrumsey.com/luna/servlet/detail/RUMSEY~8~1~326603~90095155', img:IMGS.raised_map_img},
   {id:91, type:'explore', name:'Palestine: The Holy Land As It Was And As It Is', author:'John Fulton D.D., 1900', desc:'A richly illustrated historical account of Palestine published in 1900 — documenting the land, its people, cities, and sacred sites before the 20th century. Freely available to read on the Internet Archive.', link:'https://archive.org/details/palestineholylan01fult/mode/1up', img:IMGS.fulton_holy_land_img},
   {id:93, type:'explore', name:'Picturesque Palestine, Sinai & Egypt', author:'Charles William Wilson, 1881', desc:'A lavishly illustrated four-volume set published in 1881 — featuring steel engravings of Palestinian cities, landscapes, and people by artists Harry Fenn and J.D. Woodward. One of the most visually stunning historical documents of Palestine before the 20th century. Freely available on the Internet Archive.', link:'https://archive.org/details/picturesquepales01wils_0', img:IMGS.picturesque_palestine_img},
+  {id:102, type:'explore', name:'Picturesque Palestine, Arabia and Syria', author:'Karl Gröber & Lehnert and Landrock, 1925', desc:'A stunning 1925 photographic record of Palestine, Syria, Arabia, and the surrounding region — 304 full-page sepia heliogravure plates by photographers Karl Gröber and the celebrated Lehnert & Landrock studio in Cairo. Covers Jerusalem, Gaza, Nazareth, Jaffa, Hebron, Tiberias, Jenin, and scores of other Palestinian sites. Public domain, freely available on the Internet Archive. You can also <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://www.debooks4u.com/arabia-photo-book-1920s-w304-gravure-pics-palestine-syria-mecca-yemen-p-503.html\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">purchase a physical copy and view the entirety of the book here</span>.', link:'https://archive.org/details/picturesquepales00grob', img:IMGS.palestine_landscape_img},
   {id:94, type:'explore', name:'Palestine Illustrated by Pen and Pencil', author:'Samuel Manning, 1875', desc:'A beautifully illustrated Victorian account of Palestine — featuring detailed engravings of the land, its villages, people, and sacred sites as they appeared in 1875. A vivid portrait of Palestine before the 20th century. Freely available on the Internet Archive.', link:'https://archive.org/details/palestineillustr00mann/mode/1up', img:IMGS.palestine_illustrated_img},
   {id:95, type:'explore', name:'Palestine Old Pictures', author:'Internet Archive', desc:'A collection of historical photographs of Palestine — capturing daily life, landscapes, cities, and people from the pre-Nakba era. A precious visual archive of the land and its people as they were.', link:'https://archive.org/details/palestine-old-pictures', img:IMGS.palestine_old_pics_img},
   {id:96, type:'explore', name:'Egypt and Palestine — Original Photographs', author:'Francis Frith, 1858', desc:'One of the earliest photographic records of Palestine — 76 original albumen prints taken by pioneering photographer Francis Frith in the 1850s. Among the most precious historical photographs of Palestinian land and life ever taken. Freely available on the Internet Archive.', link:'https://archive.org/details/gri_33125009312402/mode/1up', img:IMGS.egypt_palestine_frith_img},
@@ -1444,6 +1466,7 @@ const resExplore = [
 
 const resLearn = [
   {id:13, type:'learn', name:'Decolonize Palestine',      author:'decolonizepalestine.com',      desc:'A resource hub covering Palestinian history, debunking common myths, and providing reading lists and FAQs on the Palestinian cause.',       link:'https://decolonizepalestine.com'},
+  {id:108, type:'learn', name:"Let's Talk Palestine", author:'letstalkpalestine.com', desc:'A Palestinian-led education platform run by over 100 volunteers worldwide — offering a beginner-friendly Palestine 101 dictionary, downloadable infographics, daily broadcast news updates on the genocide, and a podcast with expert guests on history, politics, and culture.', link:'https://letstalkpalestine.com'},
   {id:83, type:'learn', name:'Teach Palestine', author:'teachpalestine.org', desc:'A curated educational resource for teachers and students — offering lesson plans, films, books, and guides for teaching Palestinian history, culture, and the ongoing struggle for liberation at all grade levels.', link:'https://teachpalestine.org'},
   {id:10, type:'learn', name:'Visualizing Palestine', author:'visualizingpalestine.org', desc:'Data-driven visual advocacy — communicating the Palestinian experience through powerful infographics.', link:'https://www.visualizingpalestine.org'},
   {id:26, type:'learn', name:'History of Palestinian Libraries and Archives Under Israeli Occupation', author:'Anan Hamad, Progressive Librarian (2021)', desc:'A scholarly article tracing the theft, censorship, and destruction of Palestinian libraries from the Nakba through 1993 — documenting the systematic erasure of Palestinian cultural and intellectual heritage.', link:'http://www.progressivelibrariansguild.org/PL/PL48/007hamad.pdf'},
@@ -1452,7 +1475,6 @@ const resLearn = [
   {id:33, type:'learn', name:'Journal of Palestine Studies', author:'tandfonline.com', desc:'The English-language academic journal of record on Palestinian affairs since 1971, published by the Institute for Palestine Studies. Covers history, political science, international relations, law, sociology, literature, and the arts.', link:'https://www.tandfonline.com/journals/rpal20'},
   {id:43, type:'learn', name:'Freedom Archives — Human Rights in Palestine', author:'freedomarchives.org', desc:'A searchable collection of audio recordings, pamphlets, periodicals, and documents covering Palestinian resistance and self-determination from the late 1960s through the mid-1990s — drawn from Palestinian revolutionary organisations, academics, and international solidarity voices.', link:'https://search.freedomarchives.org/collections/24'},
   {id:50, type:'learn', name:'Researching Palestine — UMass Amherst Library Guide', author:'guides.library.umass.edu', desc:'A comprehensive academic research guide created by UMass Amherst librarians covering Palestinian history, culture, current events, solidarity, and intersections with race, gender, disability, labor, and climate. Includes scholarly resources, films, fiction, poetry, and links to organisations.', link:'https://guides.library.umass.edu/palestine/home'},
-  {id:46, type:'learn', name:'The Electronic Intifada', author:'electronicintifada.net', desc:'An independent online news publication and educational resource focusing on Palestine — its people, politics, culture, and place in the world. Founded in 2001, it publishes original reporting, analysis, and first-person accounts from perspectives largely excluded from mainstream media.', link:'https://electronicintifada.net'},
 ];
 
 const resGetInvolved = [
@@ -1479,11 +1501,32 @@ const resTraditions = [
   {id:73, type:'traditions', name:'At the Seams: A Political History of Palestinian Embroidery', author:'Rachel Dedman — The Palestinian Museum', desc:'Published by the Palestinian Museum, this book explores Palestinian embroidery as a political and cultural act — tracing tatreez through displacement, resistance, and identity across a century of Palestinian history.', link:'https://www.academia.edu/125235511/BOOK_At_the_Seams_A_Political_History_of_Palestinian_Embroidery', img:IMGS.at_the_seams_img},
 ];
 
-// Merged view used by filter logic
-const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resLearn, ...resTraditions, ...resGetInvolved];
-const resByType = { books: resBooks, videos: resVideos, art: resArt, explore: resExplore, learn: resLearn, traditions: resTraditions, getinvolved: resGetInvolved };
+const resFigures = [
+  {id:103, type:'figures', name:'Palestine Scholars — Murdered in the Gaza Genocide', author:'rememberinggazascholars.org', desc:'A memorial archive honoring Palestinian academics, professors, and intellectuals killed during the ongoing genocide in Gaza. Documents their lives, fields of study, and legacies — bearing witness to the deliberate targeting of Palestinian knowledge and scholarship.', link:'https://rememberinggazascholars.org/'},
+];
 
-const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',explore:'#c07a3a',learn:'#a05070',traditions:'var(--poppy)',getinvolved:'#2c6e5a'};
+const resMusic = [
+  {id:104, type:'music', name:'Majazz Project — Palestinian Sound Archive', author:'majazzproject.com', desc:'A living archive of digitised Palestinian music, spoken word, and album artwork — compiled and remastered by DJ and researcher Mo\'min Swaitat. Some featured artists were assassinated for their role in bringing this music to light. An act of reclamation against colonial erasure. Also available to stream on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://www.nts.live/shows/palestinian-sound-archive\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">NTS Radio</span>.', link:'https://majazzproject.com'},
+  {id:106, type:'music', name:'Popular Cradle', author:'Rhiannon, Mohammed & Yara — Palestinian Youth Movement', desc:'A podcast about Palestine and the struggle for liberation, from the far diaspora. Made in partnership with the Palestinian Youth Movement. Available on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://open.spotify.com/show/61ATESR08nhiIUi96tRw49\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Spotify</span> and <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://podcasts.apple.com/us/podcast/popular-cradle/id1746569449\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Apple Podcasts</span>.', link:'https://open.spotify.com/show/61ATESR08nhiIUi96tRw49', img:IMGS.popular_cradle_img},
+  {id:107, type:'music', name:'This Is Palestine', author:'Diana Buttu — Institute for Middle East Understanding (IMEU)', desc:'A podcast highlighting people, issues, and events around Palestine — bringing stories from the ground alongside expert and activist perspectives. Hosted by Palestinian-Canadian lawyer and human rights advocate Diana Buttu. Available on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://open.spotify.com/show/3Y0BIMPNDDQNIZaubonveT\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Spotify</span> and <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://podcasts.apple.com/us/podcast/this-is-palestine/id1509337661\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Apple Podcasts</span>.', link:'https://open.spotify.com/show/3Y0BIMPNDDQNIZaubonveT', img:IMGS.this_palestine_img},
+];
+
+// Merged view used by filter logic
+const resNews = [
+  {id:109, type:'news', name:'Al Jazeera — Palestine', author:'aljazeera.com', desc:'Al Jazeera\'s dedicated Palestine coverage page — continuously updated reporting, features, opinion, and video from on the ground in Gaza, the West Bank, and across the region.', link:'https://www.aljazeera.com/where/palestine/'},
+  {id:110, type:'news', name:'Gaza Notifications', author:'@gazanotice on X', desc:'A real-time breaking news account posting the latest updates from Gaza — airstrikes, casualties, ceasefire violations, and on-the-ground developments as they happen.', link:'https://x.com/gazanotice'},
+  {id:111, type:'news', name:'Bisan Owda', author:'@wizard_bisan1 on Instagram', desc:'Palestinian journalist, filmmaker, and storyteller from Gaza — known worldwide for her dispatches opening with "It\'s Bisan from Gaza and I\'m still alive." Peabody and Emmy Award-winning coverage from AJ+. 5 million followers bearing witness to the genocide in real time.', link:'https://www.instagram.com/wizard_bisan1/'},
+  {id:112, type:'news', name:'AJ+', author:'@ajplus on Instagram', desc:'Al Jazeera\'s digital news network — delivering on-the-ground reporting, explainers, and documentary coverage of Palestine, Gaza, and global stories of justice and resistance. One of the most followed news accounts for Palestine coverage.', link:'https://www.instagram.com/ajplus/'},
+  {id:115, type:'news', name:'Eye on Palestine', author:'@eye.on.palestine on Instagram', desc:'One of the largest independent Palestinian news accounts — 14 million followers, real-time coverage of Gaza, the West Bank, and Palestinian life that mainstream media won\'t show. Repeatedly targeted and suspended by Meta for its Palestinian coverage.', link:'https://www.instagram.com/eye.on.palestine/'},
+  {id:113, type:'news', name:'Drop Site News', author:'@dropsitenews on Instagram', desc:'Independent nonprofit investigative news outlet founded by Jeremy Scahill and Ryan Grim — covering politics and war with an adversarial, anti-establishment ethos. Strong Gaza and Palestine coverage including reporting from inside northern Gaza.', link:'https://www.instagram.com/dropsitenews/'},
+  {id:114, type:'news', name:'BreakThrough News', author:'@btnewsroom on Instagram', desc:'Independent alternative news outlet covering people\'s movements and global politics — reporting on Palestine, Gaza, and resistance movements largely ignored by corporate media.', link:'https://www.instagram.com/btnewsroom/'},
+  {id:46, type:'news', name:'The Electronic Intifada', author:'electronicintifada.net', desc:'An independent online news publication and educational resource focusing on Palestine — its people, politics, culture, and place in the world. Founded in 2001, it publishes original reporting, analysis, and first-person accounts from perspectives largely excluded from mainstream media.', link:'https://electronicintifada.net'},
+];
+
+const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resLearn, ...resNews, ...resTraditions, ...resGetInvolved, ...resFigures, ...resMusic];
+const resByType = { books: resBooks, videos: resVideos, art: resArt, explore: resExplore, learn: resLearn, news: resNews, traditions: resTraditions, getinvolved: resGetInvolved, figures: resFigures, music: resMusic };
+
+const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',explore:'#c07a3a',learn:'#a05070',news:'#8a6a2a',traditions:'var(--poppy)',getinvolved:'#2c6e5a',figures:'#7a4a8a',music:'#2a6e8a'};
 let curCat='all',imgData=null;
 
 // ── GALLERY
