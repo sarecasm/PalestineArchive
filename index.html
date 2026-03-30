@@ -830,6 +830,7 @@ nav{
 .rb-learn{background:rgba(160,80,112,0.15);color:#a05070;}
 .rb-traditions{background:rgba(192,57,43,0.1);color:var(--poppy);}
 .rb-getinvolved{background:rgba(44,110,90,0.15);color:#2c6e5a;}
+.rb-music{background:rgba(42,110,138,0.15);color:#2a6e8a;}
 
 .res-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;margin-bottom:0.2rem;color:var(--ink);}
 .res-author{font-size:0.84rem;color:#9a8e78;font-style:italic;margin-bottom:0.4rem;}
@@ -1028,6 +1029,7 @@ nav{
     <div class="mob-resources-sub" id="mob-resources-sub">
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('videos',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#6b4c6b"></span>Films & Documentaries</button>
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('explore',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#c07a3a"></span>Explore Palestine</button>
+      <button class="mob-sub-btn" onclick="showPage('resources');filterRes('instagram',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#b5549a"></span>Instagram Archive</button>
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('books',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#4a6fa5"></span>Books</button>
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('learn',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#a05070"></span>Learn</button>
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('news',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#8a6a2a"></span>News & Updates</button>
@@ -1036,6 +1038,7 @@ nav{
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('traditions',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:var(--poppy)"></span>Traditions</button>
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('getinvolved',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#2c6e5a"></span>Get Involved</button>
       <button class="mob-sub-btn" onclick="showPage('resources');filterRes('figures',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#7a4a8a"></span>Prominent Figures</button>
+      <button class="mob-sub-btn" onclick="showPage('resources');filterRes('tracker',true);closeMobileMenu()"><span class="mob-sub-dot" style="background:#8a2a2a"></span>Accountability &amp; Justice</button>
     </div>
   </div>
 </div>
@@ -1213,6 +1216,9 @@ nav{
     <button class="res-pill" data-cat="explore" onclick="filterRes('explore')">
       <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
     </button>
+    <button class="res-pill" data-cat="instagram" onclick="filterRes('instagram')">
+      <span class="res-dot" style="background:#b5549a"></span> Instagram Archive
+    </button>
     <button class="res-pill" data-cat="books" onclick="filterRes('books')">
       <span class="res-dot" style="background:#4a6fa5"></span> Books
     </button>
@@ -1237,6 +1243,9 @@ nav{
     <button class="res-pill" data-cat="figures" onclick="filterRes('figures')">
       <span class="res-dot" style="background:#7a4a8a"></span> Figures
     </button>
+    <button class="res-pill" data-cat="tracker" onclick="filterRes('tracker')">
+      <span class="res-dot" style="background:#8a2a2a"></span> Accountability &amp; Justice
+    </button>
   </div>
 
   <div class="res-search-wrap">
@@ -1254,6 +1263,9 @@ nav{
       </button>
       <button class="res-navbtn" data-cat="explore" onclick="filterRes('explore')">
         <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
+      </button>
+      <button class="res-navbtn" data-cat="instagram" onclick="filterRes('instagram')">
+        <span class="res-dot" style="background:#b5549a"></span> Instagram Archive
       </button>
       <button class="res-navbtn" data-cat="books" onclick="filterRes('books')">
         <span class="res-dot" style="background:#4a6fa5"></span> Books
@@ -1278,6 +1290,9 @@ nav{
       </button>
       <button class="res-navbtn" data-cat="figures" onclick="filterRes('figures')">
         <span class="res-dot" style="background:#7a4a8a"></span> Prominent Figures
+      </button>
+      <button class="res-navbtn" data-cat="tracker" onclick="filterRes('tracker')">
+        <span class="res-dot" style="background:#8a2a2a"></span> Accountability &amp; Justice
       </button>
     </div>
     <div class="res-main">
@@ -1485,6 +1500,8 @@ const IMGS = {
   oldpik_img: './images/oldPik.png',
   palestine_landscape_img: './images/PalestineLandscape.png',
   folk_music_archive_img: './images/folkmusicarchive.png',
+  elsewhere_film_img: './images/elsewherefilm.png',
+  salt_sea_film_img: './images/saltseafilm.jpg',
   popular_cradle_img: './images/popularCradle.jpeg',
   this_palestine_img: './images/thisPalestinePodcast.png'};
 
@@ -1527,6 +1544,8 @@ const resVideos = [
   {id:49, type:'videos', label:'Speech', name:'Nelson Mandela on Palestine, Cuba & Solidarity', author:'Town Hall, New York, 1990', desc:'Extracts from Nelson Mandela\'s first US town hall following his release from prison, chaired by Ted Koppel. Mandela speaks on the ANC\'s solidarity with the PLO, his friendship with Yasser Arafat, and Palestinian liberation — standing firm on principle when it was deeply unfashionable to do so.', link:'https://youtu.be/i5TiUhhm7cQ', img:IMGS.mandela_speech},
   {id:79, type:'videos', label:'Documentary', name:'Gaza Fights for Freedom', author:'Abby Martin, 2019', desc:'Filmed during the 2018 Great March of Return, this documentary captures Palestinians in Gaza marching to the border fence demanding their right to return — and the Israeli military\'s deadly response. Features accounts from survivors, doctors, and journalists on the ground.', link:'https://gazafightsforfreedom.com', img:IMGS.gaza_fights_cover},
   {id:76, type:'videos', label:'Documentary', name:'Empire Files: Inside Palestine\'s Refugee Camps', author:'Abby Martin', desc:'In her first on-the-ground report from Palestine, Abby Martin gives a first-hand look into two of the most attacked refugee camps in the West Bank: Balata and Aida camps. With millions of displaced Palestinians around the world, hundreds of thousands are refugees in their own country — many have lived packed into these camps after being ethnically cleansed from their villages just miles away.', link:'https://youtu.be/HxvNZisaB8E', img:IMGS.wall_doc_img},
+  {id:117, type:'videos', label:'Documentary', name:'Here and Elsewhere (Ici et Ailleurs)', author:'Jean-Luc Godard & Anne-Marie Miéville, 1976', desc:'A rarely screened landmark of Palestinian cinema history. Commissioned by the Arab League in 1970, Godard\'s Dziga Vertov Group filmed Palestinian fedayeen fighters — many of whom were later killed in Black September. Returning to the footage years later with Miéville, Godard reworked it into a haunting meditation on image, revolution, and the gap between political ideals and reality. French and Arabic with English subtitles. Freely available on the Internet Archive.', link:'https://archive.org/details/palisriciailleursalighter', img:IMGS.elsewhere_film_img},
+  {id:118, type:'videos', label:'Film', name:'Salt of This Sea', author:'Annemarie Jacir, 2008', desc:'The first full-length feature film by a Palestinian female director — an Official Selection at Cannes and Palestine\'s submission to the Academy Awards. A Palestinian-American woman travels to Palestine for the first time to reclaim her grandfather\'s savings, frozen in a Jaffa bank since his exile during the 1948 Nakba. Starring Suheir Hammad and Saleh Bakri. Freely available to watch via Google Drive.', link:'https://drive.google.com/file/d/1iLXQQCrNsW9iDKQWkHLGyk0b7qRkVvQW/view', img:IMGS.salt_sea_film_img},
 ];
 
 const resArt = [
@@ -1542,6 +1561,7 @@ const resArt = [
   {id:81, type:'art', label:'Art', name:'Laila Shawa', author:'Gaza, 1940–2022', desc:'One of Palestine\'s most celebrated and revolutionary artists — painter, photographer, and silkscreen printmaker. Her Walls of Gaza series, Fashionista Terrorista, and Disposable Bodies are internationally renowned. Works held by the British Museum, Ashmolean, and Barjeel Art Foundation.', link:'https://www.octobergallery.co.uk/artists/shawa', img:IMGS.laila_shawa_img},
   {id:82, type:'art', label:'Art', name:'Malak Mattar', author:'Gaza', desc:'Palestinian painter from Gaza who began creating art during the 2014 war at age 13. Her bold, expressive canvases document Palestinian life, women, and resistance — and have been exhibited internationally. Her work continues from within Gaza.', link:'https://www.malak-mattar.com', img:IMGS.malak_mattar_img},
   {id:65, type:'art', label:'Poetry', name:'Poetry of Resistance in Occupied Palestine', author:'Trans. Sulafa Hijjawi, 1968 (rev. 2009)', desc:'An anthology of Palestinian resistance poetry translated by Sulafa Hijjawi, originally published by the Iraqi Ministry of Culture in 1968 and revised in 2009. Available as a free PDF download.', link:'https://overthrowpalacehome.files.wordpress.com/2019/02/poetryofresistance_sulafa_hijjaw-24grammata.comi_.pdf', img:IMGS.poetry_of_resistance_cover},
+  {id:134, type:'art', label:'Poetry', name:'Gaza Poets Society', author:'@gazapoets on Instagram', desc:'A community dedicated to poetry and literature in Gaza — launched in 2018, sharing the voices, verses, and literary life of Palestinian poets from within the besieged strip.', link:'https://www.instagram.com/gazapoets/'},
 ];
 
 const resExplore = [
@@ -1619,14 +1639,15 @@ const resFigures = [
 ];
 
 const resMusic = [
-  {id:116, type:'music', name:'The Palestinian Folk Music Archive', author:'palestinianfolkmusicarchive.com', desc:'A living archive of Palestinian folk music — recordings organized by district across historic Palestine, from Acre and Jaffa to Gaza, Hebron, and Nazareth. Browse by region on an interactive map. You can also submit your sitti\'s songs to help grow the archive.', link:'https://www.palestinianfolkmusicarchive.com', img:IMGS.folk_music_archive_img},
-  {id:104, type:'music', name:'Majazz Project — Palestinian Sound Archive', author:'majazzproject.com', desc:'A living archive of digitised Palestinian music, spoken word, and album artwork — compiled and remastered by DJ and researcher Mo\'min Swaitat. Some featured artists were assassinated for their role in bringing this music to light. An act of reclamation against colonial erasure. Also available to stream on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://www.nts.live/shows/palestinian-sound-archive\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">NTS Radio</span>.', link:'https://majazzproject.com'},
-  {id:106, type:'music', name:'Popular Cradle', author:'Rhiannon, Mohammed & Yara — Palestinian Youth Movement', desc:'A podcast about Palestine and the struggle for liberation, from the far diaspora. Made in partnership with the Palestinian Youth Movement. Available on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://open.spotify.com/show/61ATESR08nhiIUi96tRw49\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Spotify</span> and <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://podcasts.apple.com/us/podcast/popular-cradle/id1746569449\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Apple Podcasts</span>.', link:'https://open.spotify.com/show/61ATESR08nhiIUi96tRw49', img:IMGS.popular_cradle_img},
-  {id:107, type:'music', name:'This Is Palestine', author:'Diana Buttu — Institute for Middle East Understanding (IMEU)', desc:'A podcast highlighting people, issues, and events around Palestine — bringing stories from the ground alongside expert and activist perspectives. Hosted by Palestinian-Canadian lawyer and human rights advocate Diana Buttu. Available on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://open.spotify.com/show/3Y0BIMPNDDQNIZaubonveT\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Spotify</span> and <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://podcasts.apple.com/us/podcast/this-is-palestine/id1509337661\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Apple Podcasts</span>.', link:'https://open.spotify.com/show/3Y0BIMPNDDQNIZaubonveT', img:IMGS.this_palestine_img},
+  {id:116, type:'music', label:'Music', name:'The Palestinian Folk Music Archive', author:'palestinianfolkmusicarchive.com', desc:'A living archive of Palestinian folk music — recordings organized by district across historic Palestine, from Acre and Jaffa to Gaza, Hebron, and Nazareth. Browse by region on an interactive map. You can also submit your sitti\'s songs to help grow the archive.', link:'https://www.palestinianfolkmusicarchive.com', img:IMGS.folk_music_archive_img},
+  {id:104, type:'music', label:'Music', name:'Majazz Project — Palestinian Sound Archive', author:'majazzproject.com', desc:'A living archive of digitised Palestinian music, spoken word, and album artwork — compiled and remastered by DJ and researcher Mo\'min Swaitat. Some featured artists were assassinated for their role in bringing this music to light. An act of reclamation against colonial erasure. Also available to stream on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://www.nts.live/shows/palestinian-sound-archive\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">NTS Radio</span>.', link:'https://majazzproject.com'},
+  {id:106, type:'music', label:'Podcast', name:'Popular Cradle', author:'Rhiannon, Mohammed & Yara — Palestinian Youth Movement', desc:'A podcast about Palestine and the struggle for liberation, from the far diaspora. Made in partnership with the Palestinian Youth Movement. Available on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://open.spotify.com/show/61ATESR08nhiIUi96tRw49\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Spotify</span> and <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://podcasts.apple.com/us/podcast/popular-cradle/id1746569449\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Apple Podcasts</span>.', link:'https://open.spotify.com/show/61ATESR08nhiIUi96tRw49', img:IMGS.popular_cradle_img},
+  {id:107, type:'music', label:'Podcast', name:'This Is Palestine', author:'Diana Buttu — Institute for Middle East Understanding (IMEU)', desc:'A podcast highlighting people, issues, and events around Palestine — bringing stories from the ground alongside expert and activist perspectives. Hosted by Palestinian-Canadian lawyer and human rights advocate Diana Buttu. Available on <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://open.spotify.com/show/3Y0BIMPNDDQNIZaubonveT\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Spotify</span> and <span onclick="event.preventDefault();event.stopPropagation();window.open(\'https://podcasts.apple.com/us/podcast/this-is-palestine/id1509337661\',\'_blank\')" style="color:var(--olive);text-decoration:underline;cursor:pointer;">Apple Podcasts</span>.', link:'https://open.spotify.com/show/3Y0BIMPNDDQNIZaubonveT', img:IMGS.this_palestine_img},
 ];
 
 // Merged view used by filter logic
 const resNews = [
+  {id:124, type:'news', name:'Times of Gaza', author:'@Timesofgaza on X', desc:'One of the most widely followed real-time news accounts covering the Gaza genocide — posting breaking updates, footage, and casualty reports as they happen. A vital source for on-the-ground coverage of the ongoing assault.', link:'https://x.com/Timesofgaza'},
   {id:109, type:'news', name:'Al Jazeera — Palestine', author:'aljazeera.com', desc:'Al Jazeera\'s dedicated Palestine coverage page — continuously updated reporting, features, opinion, and video from on the ground in Gaza, the West Bank, and across the region.', link:'https://www.aljazeera.com/where/palestine/'},
   {id:110, type:'news', name:'Gaza Notifications', author:'@gazanotice on X', desc:'A real-time breaking news account posting the latest updates from Gaza — airstrikes, casualties, ceasefire violations, and on-the-ground developments as they happen.', link:'https://x.com/gazanotice'},
   {id:111, type:'news', name:'Bisan Owda', author:'@wizard_bisan1 on Instagram', desc:'Palestinian journalist, filmmaker, and storyteller from Gaza — known worldwide for her dispatches opening with "It\'s Bisan from Gaza and I\'m still alive." Peabody and Emmy Award-winning coverage from AJ+. 5 million followers bearing witness to the genocide in real time.', link:'https://www.instagram.com/wizard_bisan1/'},
@@ -1634,13 +1655,33 @@ const resNews = [
   {id:115, type:'news', name:'Eye on Palestine', author:'@eye.on.palestine on Instagram', desc:'One of the largest independent Palestinian news accounts — 14 million followers, real-time coverage of Gaza, the West Bank, and Palestinian life that mainstream media won\'t show. Repeatedly targeted and suspended by Meta for its Palestinian coverage.', link:'https://www.instagram.com/eye.on.palestine/'},
   {id:113, type:'news', name:'Drop Site News', author:'@dropsitenews on Instagram', desc:'Independent nonprofit investigative news outlet founded by Jeremy Scahill and Ryan Grim — covering politics and war with an adversarial, anti-establishment ethos. Strong Gaza and Palestine coverage including reporting from inside northern Gaza.', link:'https://www.instagram.com/dropsitenews/'},
   {id:114, type:'news', name:'BreakThrough News', author:'@btnewsroom on Instagram', desc:'Independent alternative news outlet covering people\'s movements and global politics — reporting on Palestine, Gaza, and resistance movements largely ignored by corporate media.', link:'https://www.instagram.com/btnewsroom/'},
+  {id:125, type:'news', name:'Andrey X', author:'@the_andrey_x on X', desc:'A Russian-Israeli journalist and activist living in the West Bank — documenting settler violence, IOF raids, and Palestinian daily life under occupation on the ground. Has been arrested, beaten, and subjected to political persecution by Israeli authorities for his reporting. One of the most important independent voices covering the West Bank in real time.', link:'https://x.com/the_andrey_x'},
   {id:46, type:'news', name:'The Electronic Intifada', author:'electronicintifada.net', desc:'An independent online news publication and educational resource focusing on Palestine — its people, politics, culture, and place in the world. Founded in 2001, it publishes original reporting, analysis, and first-person accounts from perspectives largely excluded from mainstream media.', link:'https://electronicintifada.net'},
+  {id:123, type:'news', name:'The New York War Crimes', author:'newyorkwarcrimes.com', desc:'A publication by Writers Against the War on Gaza — exposing the New York Times\' biased, pro-Zionist coverage of Palestine and its role in manufacturing consent for genocide. Features investigative dossiers, media analysis, ground reporting from Gaza, archival essays, and print issues. Tagline: "All the Consent That\'s Fit to Manufacture."', link:'https://newyorkwarcrimes.com'},
 ];
 
-const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resLearn, ...resNews, ...resTraditions, ...resGetInvolved, ...resFigures, ...resMusic];
-const resByType = { books: resBooks, videos: resVideos, art: resArt, explore: resExplore, learn: resLearn, news: resNews, traditions: resTraditions, getinvolved: resGetInvolved, figures: resFigures, music: resMusic };
+const resTracker = [
+  {id:119, type:'tracker', name:'Databases for Palestine', author:'databasesforpalestine.org', desc:'A suite of archival tools built for human rights attorneys and researchers — documenting the genocide in real time. Projects include Gaza Maps (forced displacement), Genocide.live (video archive of events), IDF Leaflets, IDF Movements (retracing the genocide), Memory & Accountability (stories), and Stop Murdering Journalists (memorial of martyred press). Founded 29 December 2023. "Without memory, there can be no justice."', link:'https://databasesforpalestine.org'},
+  {id:120, type:'tracker', name:'The Hind Rajab Foundation', author:'hindrajabfoundation.org', desc:'A nonprofit legal organization dedicated to breaking the cycle of Israeli impunity and achieving justice for victims of the Gaza genocide. Files criminal complaints against Israeli soldiers across multiple countries — including Spain, Italy, Brazil, and Romania — under universal jurisdiction. Named after Hind Rajab, the five-year-old girl killed in Gaza while calling for help.', link:'https://www.hindrajabfoundation.org'},
+  {id:121, type:'tracker', name:'Israel Genocide Tracker', author:'@trackingisrael on X', desc:'An account tracking and documenting Israeli soldiers and officials responsible for war crimes and genocide in Gaza — exposing names, units, and actions. Has faced repeated suppression and reach restrictions on X for its coverage.', link:'https://x.com/trackingisrael'},
+  {id:122, type:'tracker', name:'Accountability Archive', author:'accountabilityarchive.org', desc:'A crowdsourced record of journalists, politicians, and public figures who have endorsed or encouraged the ethnic cleansing of Gaza and defamed pro-Palestinian activists. Built as a public resource for future historians, researchers, and lawyers — documenting how power holders manufactured consent for genocidal aggression against the Palestinian people.', link:'https://accountabilityarchive.org'},
+];
 
-const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',explore:'#c07a3a',learn:'#a05070',news:'#8a6a2a',traditions:'var(--poppy)',getinvolved:'#2c6e5a',figures:'#7a4a8a',music:'#2a6e8a'};
+const resInstagram = [
+  {id:126, type:'instagram', name:'Mohannad Abu Rizk', author:'@mohannad.aburizk', desc:'A Palestinian filmmaker documenting the lives, stories, and landscapes of Palestine — intimate, beautifully shot portraits of people and places that humanize Palestinian identity.', link:'https://www.instagram.com/mohannad.aburizk/'},
+  {id:127, type:'instagram', name:'Mays Jabi', author:'@mays_jabi', desc:'Palestinian visual storytelling through photography and video — capturing daily life, culture, and the beauty of Palestine.', link:'https://www.instagram.com/mays_jabi/'},
+  {id:128, type:'instagram', name:'Pali Dairies', author:'@palidairies', desc:'A visual diary of Palestinian life — photos and videos documenting everyday moments, landscapes, and culture from across Palestine.', link:'https://www.instagram.com/palidairies/'},
+  {id:129, type:'instagram', name:'Real Gems PS', author:'@realgems.ps', desc:'Showcasing the hidden gems of Palestine — stunning photography of the land, its villages, architecture, and natural beauty.', link:'https://www.instagram.com/realgems.ps/'},
+  {id:130, type:'instagram', name:'Wadi al-Hamam', author:'@wadialhamam', desc:'Visual documentation of Wadi al-Hamam and Palestinian village life — preserving images of the land and its people.', link:'https://www.instagram.com/wadialhamam/'},
+  {id:131, type:'instagram', name:'Palestinian Thobbe', author:'@palestinian_thobbe', desc:'An archive dedicated to the Palestinian thobe — documenting the embroidered traditional dress of Palestine, its regional patterns, history, and living practice.', link:'https://www.instagram.com/palestinian_thobbe/'},
+  {id:132, type:'instagram', name:'Yaffa 105', author:'@yaffa.105', desc:'A Palestinian Instagram account posting photos and videos documenting Palestine — its land, people, and stories.', link:'https://www.instagram.com/yaffa.105/'},
+  {id:133, type:'instagram', name:'Ahmad Al-Bazz', author:'@ahmad.al.bazz', desc:'An independent journalist and documentary filmmaker based in Palestine — capturing the realities of life under occupation through photography and film.', link:'https://www.instagram.com/ahmad.al.bazz/'},
+];
+
+const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resInstagram, ...resLearn, ...resNews, ...resTraditions, ...resGetInvolved, ...resFigures, ...resTracker, ...resMusic];
+const resByType = { books: resBooks, videos: resVideos, art: resArt, explore: resExplore, instagram: resInstagram, learn: resLearn, news: resNews, tracker: resTracker, traditions: resTraditions, getinvolved: resGetInvolved, figures: resFigures, music: resMusic };
+
+const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',explore:'#c07a3a',instagram:'#b5549a',learn:'#a05070',news:'#8a6a2a',tracker:'#8a2a2a',traditions:'var(--poppy)',getinvolved:'#2c6e5a',figures:'#7a4a8a',music:'#2a6e8a'};
 let curCat='all',imgData=null;
 
 // ── GALLERY
@@ -1800,7 +1841,7 @@ function renderRes(){
         <div class="res-card-inner">
           ${thumbHtml}
           <div class="res-card-text">
-            ${(curCat==='all'||curCat==='videos'||curCat==='art')&&r.label?`<span class="res-badge rb-${r.type}">${r.label}</span>`:''}
+            ${(curCat==='all'||curCat==='videos'||curCat==='art'||curCat==='music')&&r.label?`<span class="res-badge rb-${r.type}">${r.label}</span>`:''}
             <div class="res-name">${r.name}</div>
             ${r.author?`<div class="res-author">${r.author}</div>`:''}
             ${r.desc?`<div class="res-desc res-desc-desktop">${r.desc}</div>`:''}
