@@ -1822,7 +1822,8 @@ function renderRes(){
   let data = curSearch
     ? allResources.filter(r =>
         (r.name||'').toLowerCase().includes(curSearch) ||
-        (r.author||'').toLowerCase().includes(curSearch) ||
+        (r.author||'').toLowerCase().includes(curSearch) 
+        //||
         //(r.desc||'').replace(/<[^>]+>/g,'').toLowerCase().includes(curSearch)
       )
     : (curCat==='all' ? allResources : (resByType[curCat]||[]));
