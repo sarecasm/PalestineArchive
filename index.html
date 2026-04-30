@@ -1110,7 +1110,7 @@ nav{
   <ul class="nav-links">
     <li><button class="nav-btn active" id="nav-home" onclick="showPage('home')">Home</button></li>
     <li><button class="nav-btn" id="nav-gallery" onclick="showPage('gallery')">Gallery</button></li>
-    <li><button class="nav-btn" id="nav-resources" onclick="showPage('resources')">Resources</button></li>
+    <li><button class="nav-btn" id="nav-resources" onclick="showPage('resources');filterRes('videos')">Resources</button></li>
   </ul>
   <button class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -1122,7 +1122,7 @@ nav{
   <button class="nav-mobile-btn active" id="mob-home" onclick="showPage('home');closeMobileMenu()">Home</button>
   <button class="nav-mobile-btn" id="mob-gallery" onclick="showPage('gallery');closeMobileMenu()">Gallery</button>
   <div style="border-bottom:1px solid var(--border);">
-    <button class="nav-mobile-btn" id="mob-resources" style="border-bottom:none;width:100%;padding-right:0.5rem;" onclick="toggleMobResources(event)">
+    <button class="nav-mobile-btn" id="mob-resources" style="border-bottom:none;width:100%;padding-right:0.5rem;" onclick="showPage('resources');filterRes('videos',true);toggleMobResources(event)">
       <span class="mob-resources-row" id="mob-resources-row">
         Resources
         <span class="mob-resources-arrow">▼</span>
@@ -1162,7 +1162,7 @@ nav{
       <p class="hero-desc">A place to gather photographs, stories, and knowledge. Preserving memory through image and word.</p>
       <div class="hero-ctas">
         <button class="btn-solid" onclick="showPage('gallery')">View Gallery</button>
-        <button class="btn-line" onclick="showPage('resources')">Resources</button>
+        <button class="btn-line" onclick="showPage('resources');filterRes('videos')">Resources</button>
       </div>
     </div>
 
@@ -1246,7 +1246,7 @@ nav{
       <div class="strip-title">Photo Gallery</div>
       <div class="strip-desc">Photographs with stories. Hover any card to flip it and read the memory behind the image.</div>
     </div>
-    <div class="strip-card" onclick="showPage('resources')">
+    <div class="strip-card" onclick="showPage('resources');filterRes('videos')">
       <div class="strip-icon">📚</div>
       <div class="strip-label">Library</div>
       <div class="strip-title">Resources</div>
