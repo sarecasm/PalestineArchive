@@ -1657,6 +1657,18 @@ const IMGS = {
   palestinian_thobbe: './images/PalestinianThobbe.jpg',
   yaffa_105: './images/Yaffa105.jpg',
   ahmad_albazz: './images/AhmadAlBazz.jpg',
+  times_of_gaza: './images/TimesOfGaza.jpg',
+  aljazeera: './images/Aljazeera.png',
+  gaza_notifications: './images/GazaNotifications.jpg',
+  bisan: './images/Bisan.jpg',
+  ajplus: './images/AJPlus.jpg',
+  eye_on_palestine: './images/EyeOnPalestine.jpg',
+  dropsite_news: './images/DropSiteNews.jpg',
+  breakthrough_news: './images/BreakthroughNews.jpg',
+  andrey: './images/Andrey.jpg',
+  electronic_intifada: './images/electronicIntifada.png',
+  ny_war_crimes: './images/NewYorkWarCrimes.jpg',
+  abdel_bari: './images/AbdelBari.jpg',
   ala_inthewild: './images/AlaInTheWild.jpg'};
 
 // ── RESOURCE DATA (one array per category)
@@ -1823,17 +1835,18 @@ const resMusic = [
 
 // Merged view used by filter logic
 const resNews = [
-  {id:124, type:'news', name:'Times of Gaza', author:'@Timesofgaza on X', desc:'One of the most widely followed real-time news accounts covering the Gaza genocide — posting breaking updates, footage, and casualty reports as they happen. A vital source for on-the-ground coverage of the ongoing assault.', link:'https://x.com/Timesofgaza'},
-  {id:109, type:'news', name:'Al Jazeera — Palestine', author:'aljazeera.com', desc:'Al Jazeera\'s dedicated Palestine coverage page — continuously updated reporting, features, opinion, and video from on the ground in Gaza, the West Bank, and across the region.', link:'https://www.aljazeera.com/where/palestine/'},
-  {id:110, type:'news', name:'Gaza Notifications', author:'@gazanotice on X', desc:'A real-time breaking news account posting the latest updates from Gaza — airstrikes, casualties, ceasefire violations, and on-the-ground developments as they happen.', link:'https://x.com/gazanotice'},
-  {id:111, type:'news', name:'Bisan Owda', author:'@wizard_bisan1 on Instagram', desc:'Palestinian journalist, filmmaker, and storyteller from Gaza — known worldwide for her dispatches opening with "It\'s Bisan from Gaza and I\'m still alive." Peabody and Emmy Award-winning coverage from AJ+. 5 million followers bearing witness to the genocide in real time.', link:'https://www.instagram.com/wizard_bisan1/'},
-  {id:112, type:'news', name:'AJ+', author:'@ajplus on Instagram', desc:'Al Jazeera\'s digital news network — delivering on-the-ground reporting, explainers, and documentary coverage of Palestine, Gaza, and global stories of justice and resistance. One of the most followed news accounts for Palestine coverage.', link:'https://www.instagram.com/ajplus/'},
-  {id:115, type:'news', name:'Eye on Palestine', author:'@eye.on.palestine on Instagram', desc:'One of the largest independent Palestinian news accounts — 14 million followers, real-time coverage of Gaza, the West Bank, and Palestinian life that mainstream media won\'t show. Repeatedly targeted and suspended by Meta for its Palestinian coverage.', link:'https://www.instagram.com/eye.on.palestine/'},
-  {id:113, type:'news', name:'Drop Site News', author:'@dropsitenews on Instagram', desc:'Independent nonprofit investigative news outlet founded by Jeremy Scahill and Ryan Grim — covering politics and war with an adversarial, anti-establishment ethos. Strong Gaza and Palestine coverage including reporting from inside northern Gaza.', link:'https://www.instagram.com/dropsitenews/'},
-  {id:114, type:'news', name:'BreakThrough News', author:'@btnewsroom on Instagram', desc:'Independent alternative news outlet covering people\'s movements and global politics — reporting on Palestine, Gaza, and resistance movements largely ignored by corporate media.', link:'https://www.instagram.com/btnewsroom/'},
-  {id:125, type:'news', name:'Andrey X', author:'@the_andrey_x on X', desc:'A Russian-Israeli journalist and activist living in the West Bank — documenting settler violence, IOF raids, and Palestinian daily life under occupation on the ground. Has been arrested, beaten, and subjected to political persecution by Israeli authorities for his reporting. One of the most important independent voices covering the West Bank in real time.', link:'https://x.com/the_andrey_x'},
-  {id:46, type:'news', name:'The Electronic Intifada', author:'electronicintifada.net', desc:'An independent online news publication and educational resource focusing on Palestine — its people, politics, culture, and place in the world. Founded in 2001, it publishes original reporting, analysis, and first-person accounts from perspectives largely excluded from mainstream media.', link:'https://electronicintifada.net'},
-  {id:123, type:'news', name:'The New York War Crimes', author:'newyorkwarcrimes.com', desc:'A publication by Writers Against the War on Gaza — exposing the New York Times\' biased, pro-Zionist coverage of Palestine and its role in manufacturing consent for genocide. Features investigative dossiers, media analysis, ground reporting from Gaza, archival essays, and print issues. Tagline: "All the Consent That\'s Fit to Manufacture."', link:'https://newyorkwarcrimes.com'},
+  {id:111, type:'news', name:'Bisan Owda', author:'@wizard_bisan1 on Instagram', desc:'Palestinian journalist, filmmaker, and storyteller from Gaza — known worldwide for her dispatches opening with "It\'s Bisan from Gaza and I\'m still alive." Peabody and Emmy Award-winning coverage from AJ+. 5 million followers bearing witness to the genocide in real time.', link:'https://www.instagram.com/wizard_bisan1/', img:IMGS.bisan},
+  {id:124, type:'news', name:'Times of Gaza', author:'@Timesofgaza on X', desc:'One of the most widely followed real-time news accounts covering the Gaza genocide — posting breaking updates, footage, and casualty reports as they happen. A vital source for on-the-ground coverage of the ongoing assault.', link:'https://x.com/Timesofgaza', img:IMGS.times_of_gaza},
+  {id:158, type:'news', name:'Abdelbari Atwan', author:'@abdelbari.atwan on Instagram', desc:'Veteran Palestinian journalist and editor-in-chief of Raʾy al-Yawm — one of the Arab world\'s most widely read voices on Palestine, Gaza, and regional politics. Decades of frontline analysis and commentary on Palestinian resistance and the ongoing genocide.', link:'https://www.instagram.com/abdelbari.atwan/', img:IMGS.abdel_bari},
+  {id:110, type:'news', name:'Gaza Notifications', author:'@gazanotice on X', desc:'A real-time breaking news account posting the latest updates from Gaza — airstrikes, casualties, ceasefire violations, and on-the-ground developments as they happen.', link:'https://x.com/gazanotice', img:IMGS.gaza_notifications},
+  {id:109, type:'news', name:'Al Jazeera — Palestine', author:'aljazeera.com', desc:'Al Jazeera\'s dedicated Palestine coverage page — continuously updated reporting, features, opinion, and video from on the ground in Gaza, the West Bank, and across the region.', link:'https://www.aljazeera.com/where/palestine/', img:IMGS.aljazeera},
+  {id:112, type:'news', name:'AJ+', author:'@ajplus on Instagram', desc:'Al Jazeera\'s digital news network — delivering on-the-ground reporting, explainers, and documentary coverage of Palestine, Gaza, and global stories of justice and resistance. One of the most followed news accounts for Palestine coverage.', link:'https://www.instagram.com/ajplus/', img:IMGS.ajplus},
+  {id:115, type:'news', name:'Eye on Palestine', author:'@eye.on.palestine on Instagram', desc:'One of the largest independent Palestinian news accounts — 14 million followers, real-time coverage of Gaza, the West Bank, and Palestinian life that mainstream media won\'t show. Repeatedly targeted and suspended by Meta for its Palestinian coverage.', link:'https://www.instagram.com/eye.on.palestine/', img:IMGS.eye_on_palestine},
+  {id:113, type:'news', name:'Drop Site News', author:'@dropsitenews on Instagram', desc:'Independent nonprofit investigative news outlet founded by Jeremy Scahill and Ryan Grim — covering politics and war with an adversarial, anti-establishment ethos. Strong Gaza and Palestine coverage including reporting from inside northern Gaza.', link:'https://www.instagram.com/dropsitenews/', img:IMGS.dropsite_news},
+  {id:114, type:'news', name:'BreakThrough News', author:'@btnewsroom on Instagram', desc:'Independent alternative news outlet covering people\'s movements and global politics — reporting on Palestine, Gaza, and resistance movements largely ignored by corporate media.', link:'https://www.instagram.com/btnewsroom/', img:IMGS.breakthrough_news},
+  {id:125, type:'news', name:'Andrey X', author:'@the_andrey_x on X', desc:'A Russian journalist and activist living in the West Bank — documenting settler violence, IOF raids, and Palestinian daily life under occupation on the ground. Has been arrested, beaten, and subjected to political persecution by Israeli authorities for his reporting.', link:'https://x.com/the_andrey_x', img:IMGS.andrey},
+  {id:46, type:'news', name:'The Electronic Intifada', author:'electronicintifada.net', desc:'An independent online news publication and educational resource focusing on Palestine — its people, politics, culture, and place in the world. Founded in 2001, it publishes original reporting, analysis, and first-person accounts from perspectives largely excluded from mainstream media.', link:'https://electronicintifada.net', img:IMGS.electronic_intifada},
+  {id:123, type:'news', name:'The New York War Crimes', author:'newyorkwarcrimes.com', desc:'A publication by Writers Against the War on Gaza — exposing the New York Times\' biased, pro-Zionist coverage of Palestine and its role in manufacturing consent for genocide. Features investigative dossiers, media analysis, ground reporting from Gaza, archival essays, and print issues. Tagline: "All the Consent That\'s Fit to Manufacture."', link:'https://newyorkwarcrimes.com', img:IMGS.ny_war_crimes},
 ];
 
 const resTracker = [
@@ -1984,7 +1997,7 @@ function bindCardFlips(){
 }
 
 // ── RESOURCES
-const _gridCats = new Set(['books','videos','music','art','traditions','getinvolved','instagram']);
+const _gridCats = new Set(['books','videos','music','art','traditions','getinvolved','instagram','news']);
 
 function renderRes(){
   const list=document.getElementById('res-list');
