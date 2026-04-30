@@ -1517,6 +1517,8 @@ function showPage(name){
   const mob = document.getElementById('mob-'+name);
   if(mob) mob.classList.add('active');
   window.scrollTo(0,0);
+  if(name === 'home') history.replaceState(null,'',location.pathname);
+  else if(name !== 'resources') history.replaceState(null,'','#'+name);
 }
 
 function toggleMobileMenu(){
@@ -2112,6 +2114,9 @@ function searchRes(val){
   renderRes();
 }
 
+const _catToHash={videos:'films',books:'books',learn:'learn',news:'news',explore:'explore',music:'music',instagram:'instagram',art:'art',traditions:'traditions',getinvolved:'getinvolved',figures:'figures',tracker:'tracker',all:'resources'};
+const _hashToCat={films:'videos',books:'books',learn:'learn',news:'news',explore:'explore',music:'music',instagram:'instagram',art:'art',traditions:'traditions',getinvolved:'getinvolved',figures:'figures',tracker:'tracker',resources:'videos'};
+
 function filterRes(cat, scrollPillIntoView){
   curCat=cat;
   curSearch='';
@@ -2119,6 +2124,7 @@ function filterRes(cat, scrollPillIntoView){
   if(searchEl) searchEl.value='';
   document.querySelectorAll('.res-navbtn').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
   document.querySelectorAll('.res-pill').forEach(b=>b.classList.toggle('active',b.dataset.cat===cat));
+  history.replaceState(null,'','#'+(_catToHash[cat]||cat));
   renderRes();
   window.scrollTo({top:0, behavior:'instant'});
   if(scrollPillIntoView && window.matchMedia('(hover:none)').matches){
@@ -2176,7 +2182,16 @@ function submitRes(){
 
 document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open');}));
 
-renderGallery();renderRes();
+function _navigateToHash(){
+  const hash = location.hash.slice(1).toLowerCase();
+  if(!hash){ return; }
+  if(hash==='home'){ showPage('home'); return; }
+  if(hash==='gallery'){ showPage('gallery'); return; }
+  if(_hashToCat[hash]){ showPage('resources'); filterRes(_hashToCat[hash]); return; }
+}
+window.addEventListener('hashchange', _navigateToHash);
+
+renderGallery();renderRes();_navigateToHash();
 </script>
 </body>
 </html>
