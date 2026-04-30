@@ -2187,7 +2187,7 @@ function _navigateToHash(){
   if(!hash){ return; }
   if(hash==='home'){ showPage('home'); return; }
   if(hash==='gallery'){ showPage('gallery'); return; }
-  if(_hashToCat[hash]){ showPage('resources'); filterRes(_hashToCat[hash]); return; }
+  if(_hashToCat[hash]){ showPage('resources'); filterRes(_hashToCat[hash], true); return; }
 }
 window.addEventListener('hashchange', _navigateToHash);
 
