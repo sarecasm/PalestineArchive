@@ -1322,12 +1322,6 @@ nav{
     <button class="res-pill" data-cat="videos" onclick="filterRes('videos')">
       <span class="res-dot" style="background:#6b4c6b"></span> Films
     </button>
-    <button class="res-pill" data-cat="explore" onclick="filterRes('explore')">
-      <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
-    </button>
-    <button class="res-pill" data-cat="instagram" onclick="filterRes('instagram')">
-      <span class="res-dot" style="background:#b5549a"></span> Instagram Archive
-    </button>
     <button class="res-pill" data-cat="books" onclick="filterRes('books')">
       <span class="res-dot" style="background:#4a6fa5"></span> Books
     </button>
@@ -1337,11 +1331,17 @@ nav{
     <button class="res-pill" data-cat="news" onclick="filterRes('news')">
       <span class="res-dot" style="background:#8a6a2a"></span> News &amp; Updates
     </button>
-    <button class="res-pill" data-cat="art" onclick="filterRes('art')">
-      <span class="res-dot" style="background:#8aaa50"></span> Art
+    <button class="res-pill" data-cat="explore" onclick="filterRes('explore')">
+      <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
     </button>
     <button class="res-pill" data-cat="music" onclick="filterRes('music')">
       <span class="res-dot" style="background:#2a6e8a"></span> Music &amp; Podcasts
+    </button>
+    <button class="res-pill" data-cat="instagram" onclick="filterRes('instagram')">
+      <span class="res-dot" style="background:#b5549a"></span> Instagram Archive
+    </button>
+    <button class="res-pill" data-cat="art" onclick="filterRes('art')">
+      <span class="res-dot" style="background:#8aaa50"></span> Art
     </button>
     <button class="res-pill" data-cat="traditions" onclick="filterRes('traditions')">
       <span class="res-dot" style="background:var(--poppy)"></span> Traditions
@@ -1370,12 +1370,6 @@ nav{
       <button class="res-navbtn" data-cat="videos" onclick="filterRes('videos')">
         <span class="res-dot" style="background:#6b4c6b"></span> Films &amp; Documentaries
       </button>
-      <button class="res-navbtn" data-cat="explore" onclick="filterRes('explore')">
-        <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
-      </button>
-      <button class="res-navbtn" data-cat="instagram" onclick="filterRes('instagram')">
-        <span class="res-dot" style="background:#b5549a"></span> Instagram Archive
-      </button>
       <button class="res-navbtn" data-cat="books" onclick="filterRes('books')">
         <span class="res-dot" style="background:#4a6fa5"></span> Books
       </button>
@@ -1385,11 +1379,17 @@ nav{
       <button class="res-navbtn" data-cat="news" onclick="filterRes('news')">
         <span class="res-dot" style="background:#8a6a2a"></span> News &amp; Updates
       </button>
-      <button class="res-navbtn" data-cat="art" onclick="filterRes('art')">
-        <span class="res-dot" style="background:#8aaa50"></span> Art
+      <button class="res-navbtn" data-cat="explore" onclick="filterRes('explore')">
+        <span class="res-dot" style="background:#c07a3a"></span> Explore Palestine
       </button>
       <button class="res-navbtn" data-cat="music" onclick="filterRes('music')">
         <span class="res-dot" style="background:#2a6e8a"></span> Music &amp; Podcasts
+      </button>
+      <button class="res-navbtn" data-cat="instagram" onclick="filterRes('instagram')">
+        <span class="res-dot" style="background:#b5549a"></span> Instagram Archive
+      </button>
+      <button class="res-navbtn" data-cat="art" onclick="filterRes('art')">
+        <span class="res-dot" style="background:#8aaa50"></span> Art
       </button>
       <button class="res-navbtn" data-cat="traditions" onclick="filterRes('traditions')">
         <span class="res-dot" style="background:var(--poppy)"></span> Traditions
@@ -1868,7 +1868,7 @@ const resInstagram = [
   {id:133, type:'instagram', name:'Ahmad Al-Bazz', author:'@ahmad.al.bazz', desc:'An independent journalist and documentary filmmaker based in Palestine — capturing the realities of life under occupation through photography and film.', link:'https://www.instagram.com/ahmad.al.bazz/', img:IMGS.ahmad_albazz},
 ];
 
-const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resInstagram, ...resLearn, ...resNews, ...resTraditions, ...resGetInvolved, ...resFigures, ...resTracker, ...resMusic];
+const allResources = [...resVideos, ...resBooks, ...resLearn, ...resNews, ...resExplore, ...resMusic, ...resInstagram, ...resArt, ...resTraditions, ...resGetInvolved, ...resFigures, ...resTracker];
 const resByType = { books: resBooks, videos: resVideos, art: resArt, explore: resExplore, instagram: resInstagram, learn: resLearn, news: resNews, tracker: resTracker, traditions: resTraditions, getinvolved: resGetInvolved, figures: resFigures, music: resMusic };
 
 const accentColors={books:'#4a6fa5',videos:'#6b4c6b',art:'#8aaa50',explore:'#c07a3a',instagram:'#b5549a',learn:'#a05070',news:'#8a6a2a',tracker:'#8a2a2a',traditions:'var(--poppy)',getinvolved:'#2c6e5a',figures:'#7a4a8a',music:'#2a6e8a'};
