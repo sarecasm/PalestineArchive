@@ -1648,7 +1648,16 @@ const IMGS = {
   palestinianDiary: './images/palestinianDiary.jpg',
   preOccupationPodcast: './images/preOccupationPodcast.jpg',
   outOfPlace: './images/outOfPlace.jpg',
-  returnSalmanMemoir: './images/returnSalmanMemoir.jpg'};
+  returnSalmanMemoir: './images/returnSalmanMemoir.jpg',
+  mohannad_rizk: './images/MohannadRizk.jpg',
+  mays_jabi: './images/MaysJabi.jpg',
+  pali_dairies: './images/PaliDairies.jpg',
+  wadi_alhamam: './images/WadialHamam.jpg',
+  real_gems: './images/RealGems.jpg',
+  palestinian_thobbe: './images/PalestinianThobbe.jpg',
+  yaffa_105: './images/Yaffa105.jpg',
+  ahmad_albazz: './images/AhmadAlBazz.jpg',
+  ala_inthewild: './images/AlaInTheWild.jpg'};
 
 // ── RESOURCE DATA (one array per category)
 
@@ -1835,14 +1844,15 @@ const resTracker = [
 ];
 
 const resInstagram = [
-  {id:126, type:'instagram', name:'Mohannad Abu Rizk', author:'@mohannad.aburizk', desc:'A Palestinian filmmaker documenting the lives, stories, and landscapes of Palestine — intimate, beautifully shot portraits of people and places that humanize Palestinian identity.', link:'https://www.instagram.com/mohannad.aburizk/'},
-  {id:127, type:'instagram', name:'Mays Jabi', author:'@mays_jabi', desc:'Palestinian visual storytelling through photography and video — capturing daily life, culture, and the beauty of Palestine.', link:'https://www.instagram.com/mays_jabi/'},
-  {id:128, type:'instagram', name:'Pali Dairies', author:'@palidairies', desc:'A visual diary of Palestinian life — photos and videos documenting everyday moments, landscapes, and culture from across Palestine.', link:'https://www.instagram.com/palidairies/'},
-  {id:129, type:'instagram', name:'Real Gems PS', author:'@realgems.ps', desc:'Showcasing the hidden gems of Palestine — stunning photography of the land, its villages, architecture, and natural beauty.', link:'https://www.instagram.com/realgems.ps/'},
-  {id:130, type:'instagram', name:'Wadi al-Hamam', author:'@wadialhamam', desc:'Visual documentation of Wadi al-Hamam and Palestinian village life — preserving images of the land and its people.', link:'https://www.instagram.com/wadialhamam/'},
-  {id:131, type:'instagram', name:'Palestinian Thobbe', author:'@palestinian_thobbe', desc:'An archive dedicated to the Palestinian thobe — documenting the embroidered traditional dress of Palestine, its regional patterns, history, and living practice.', link:'https://www.instagram.com/palestinian_thobbe/'},
-  {id:132, type:'instagram', name:'Yaffa 105', author:'@yaffa.105', desc:'A Palestinian Instagram account posting photos and videos documenting Palestine — its land, people, and stories.', link:'https://www.instagram.com/yaffa.105/'},
-  {id:133, type:'instagram', name:'Ahmad Al-Bazz', author:'@ahmad.al.bazz', desc:'An independent journalist and documentary filmmaker based in Palestine — capturing the realities of life under occupation through photography and film.', link:'https://www.instagram.com/ahmad.al.bazz/'},
+  {id:126, type:'instagram', name:'Mohannad Abu Rizk', author:'@mohannad.aburizk', desc:'A Palestinian filmmaker documenting the lives, stories, and landscapes of Palestine — intimate, beautifully shot portraits of people and places that humanize Palestinian identity.', link:'https://www.instagram.com/mohannad.aburizk/', img:IMGS.mohannad_rizk},
+  {id:157, type:'instagram', name:'Ala in the Wild', author:'@alainthewild', desc:'A Palestinian photographer exploring the landscapes and natural beauty of Palestine — intimate nature photography rooted in a deep connection to the land.', link:'https://www.instagram.com/alainthewild/', img:IMGS.ala_inthewild},
+  {id:127, type:'instagram', name:'Mays Jabi', author:'@mays_jabi', desc:'Palestinian visual storytelling through photography and video — capturing daily life, culture, and the beauty of Palestine.', link:'https://www.instagram.com/mays_jabi/', img:IMGS.mays_jabi},
+  {id:128, type:'instagram', name:'Pali Dairies', author:'@palidairies', desc:'A visual diary of Palestinian life — photos and videos documenting everyday moments, landscapes, and culture from across Palestine.', link:'https://www.instagram.com/palidairies/', img:IMGS.pali_dairies},
+  {id:129, type:'instagram', name:'Real Gems PS', author:'@realgems.ps', desc:'Showcasing the hidden gems of Palestine — stunning photography of the land, its villages, architecture, and natural beauty.', link:'https://www.instagram.com/realgems.ps/', img:IMGS.real_gems},
+  {id:130, type:'instagram', name:'Wadi al-Hamam', author:'@wadialhamam', desc:'Visual documentation of Wadi al-Hamam and Palestinian village life — preserving images of the land and its people.', link:'https://www.instagram.com/wadialhamam/', img:IMGS.wadi_alhamam},
+  {id:131, type:'instagram', name:'Palestinian Thobbe', author:'@palestinian_thobbe', desc:'An archive dedicated to the Palestinian thobe — documenting the embroidered traditional dress of Palestine, its regional patterns, history, and living practice.', link:'https://www.instagram.com/palestinian_thobbe/', img:IMGS.palestinian_thobbe},
+  {id:132, type:'instagram', name:'Yaffa 105', author:'@yaffa.105', desc:'A Palestinian Instagram account posting photos and videos documenting Palestine — its land, people, and stories.', link:'https://www.instagram.com/yaffa.105/', img:IMGS.yaffa_105},
+  {id:133, type:'instagram', name:'Ahmad Al-Bazz', author:'@ahmad.al.bazz', desc:'An independent journalist and documentary filmmaker based in Palestine — capturing the realities of life under occupation through photography and film.', link:'https://www.instagram.com/ahmad.al.bazz/', img:IMGS.ahmad_albazz},
 ];
 
 const allResources = [...resBooks, ...resVideos, ...resArt, ...resExplore, ...resInstagram, ...resLearn, ...resNews, ...resTraditions, ...resGetInvolved, ...resFigures, ...resTracker, ...resMusic];
@@ -1974,7 +1984,7 @@ function bindCardFlips(){
 }
 
 // ── RESOURCES
-const _gridCats = new Set(['books','videos','music','art','traditions','getinvolved']);
+const _gridCats = new Set(['books','videos','music','art','traditions','getinvolved','instagram']);
 
 function renderRes(){
   const list=document.getElementById('res-list');
